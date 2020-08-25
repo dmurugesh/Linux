@@ -28,16 +28,27 @@ All the above directories can have sub folder/directires inside it
 
  ## Administrative privileges in terminal ##
  
-1. when we try to edit permission denied files we cannot edit file directly for such cases we use command "** sudo nano ./<filename> **"
+1. when we try to edit permission denied files we cannot edit file directly for such cases we use command "**"sudo nano ./<filename>"**
 2. **sudo !!** -- is use to run the pervious sudo commands
 3. **sudo su** -- is use to change the user of computer it becomes rootuser you can edit all the files
 
   ## apt-get Install files ##
   
-1. **apt-get install <name of appplication>** -- install the the application 
+1. **"apt-get install <name of appplication>"** -- install the the application 
     eg:  apt-get install bluefish || sudo apt-get install bluefish 
-2. **apt-get remove <name of appplication> ** -- remove the the application 
+2. **"apt-get remove <name of appplication>"** -- remove the the application 
     eg:  apt-get remove bluefish || sudo apt-get remove bluefish 
-3. **apt-get cache search <filename> ** -- this will search all the files with name bluefish
-4. **apt-cache policy gimp ** -- this will display the installed and version 
-5. **sudo dpkg -i ./<filename> ** - unpack deg file and install it. make sure your are in right folder
+3. **"apt-get cache search <filename>"** -- this will search all the files with name bluefish
+4. **"apt-cache policy gimp"** -- this will display the installed and version 
+5. **"sudo dpkg -i ./<filename>"** - unpack deg file and install it. make sure your are in right folder
+ 
+ ## Other Command ##
+
+1. **"rm-d bar"** - will only delete empty directories.
+2. **"cat baz"** - This will print out the entire contents of baz to the terminal.
+3. **"less baz"** - This will also print the contents of baz, but one terminal page at a time, beginning at the start of the file.
+4. **"touch foobar"** - This creates an empty file with the name foobar in your current working directory. The contents of this file are empty
+5. **"mv foobar fizzbuzz"** - stands for “move” and it can move a file or directory from one place to another.
+6. **"cp fizzbuzz foobar"** - cp stands for copy By copying fizzbuzz to a new file called foobar, we have replicated the original file in a new file with a different name.
+7. **"nano foobar"** - This will open up a space where you can immediately start typing to edit foobar.
+8. **"rm fizzbuzz"** - Unlike directories, files are deleted whether they contain content or not.
