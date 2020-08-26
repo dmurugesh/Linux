@@ -81,7 +81,15 @@ syntax echo $VAR_NAME
 * **"ls -a"** - displays the hidden filies inside directory or folder
 * **"ls -l -a"** => Can be written as **"ls -la"** or **"ls -al"**
 * **"ls -F"** - reveals the file type eg: / - Directory, @ - Link, * - Executable
-
+* **"ls -t"** - List files by time
+* **"ls -r"** - Reverse order
+* **"ls -latr"** - Long listing including all filies revererse sorted by time
+* **"ls -R"** - List files recursively
+* **"tree"** - display all files in tree shape 
+* **"tree -d"** - display only the filename directories
+* **"ls -d <Filename>"** - display the Directory name
+* **"ls --color"** - change the color of display 
+ 
   ## apt-get Install files ##
   
 1. **"apt-get install <name of appplication>"** -- install the the application 
