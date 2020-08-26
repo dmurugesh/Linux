@@ -25,26 +25,62 @@ Command line is more powerfull
 Root is systems superuser
 Normal accounts can only do a subset of the things root can do.
 Root access is typically restricted to sysytema administrators.
-
-
-
- ## Basic Commands ## 
  
-1. **pwd** -- displays the current directory 
-2. **cd** -- use to change directory 
-   i) **"cd ./<filename>"** -- use to specfic an absolute path 
-   ii) **"cd ../"** -- use to go to parent folder 
-  iii) **"cd ~"** -- use to go to Home
-3. **ls** --show which all files are present in the order
+## Basic Linux Commands ##
+
+Commands are case sensetive 
+* **ls** - List directory Contents
    i) **"ls -l"** -- gives the list  of files with created date 
   ii) **"ls -r"** -- gives the folder name in reverse order 
  iii) **"ls -p"** --  append / indicator to directories
+* **cd** - Changes the current directory 
+   i) **"cd ./<filename>"** -- use to specfic an absolute path 
+   ii) **"cd ../"** -- use to go to parent folder 
+  iii) **"cd ~"** -- use to go to Home
+* **pwd** - Displays the present working directory 
+* **cat** - Concatenates and display Files 
+* **echo** - Displays arguments to the screem 
+* **man** - displays the Online Manual 
+* **exit** - Exist the Shell or your Current session 
+* **clear** - Clear the screen 
+* **which** - Locate command
+* **tac** - displays a file's content in reverse order
+
 
  ## Administrative privileges in terminal ##
  
 1. when we try to edit permission denied files we cannot edit file directly for such cases we use command "**"sudo nano ./<filename>"**
 2. **sudo !!** -- is use to run the pervious sudo commands
 3. **sudo su** -- is use to change the user of computer it becomes rootuser you can edit all the files
+ 
+  ## Enivroment Variables ##
+
+* storage location Storage location that has a name and a value.
+* Typically uppercase
+* Access the contents by executing
+
+syntax echo $VAR_NAME
+
+  ## Directories ##
+
+* Are container for other files and directories 
+* Provide a tree like structure 
+* Can be accessed by name or shortcut
+
+* **.** => This Directory 
+* **..** => Parent directory
+* **"cd -"** => Change to the previous directory 
+* **"echo $OLDPWD"** - Hold the directory previously in. 
+* **mkdir** - create Directory 
+* **rmdir** - Removes directory/file 
+* **"rm -rf"** - recursively removes directory and all files inside the folder 
+
+  ## Listing Files and Understanding LS Output ##
+
+* **"ls -l"** - display the long details of file/directory
+* **"ls -a"** - displays the hidden filies inside directory or folder
+* **"ls -l -a"** => Can be written as **"ls -la"** or **"ls -al"**
+* **"ls -F"** - reveals the file type eg: / - Directory, @ - Link, * - Executable
 
   ## apt-get Install files ##
   
