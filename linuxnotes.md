@@ -13,18 +13,32 @@ The Complete Linux Course: Beginner to Power User!
 8. **/var** - variable most notable log files
 All the above directories can have sub folder/directires inside it
 
+##Shell##
+
+Shell - A program that accepts your commands and executes the commands.
+Shell is the default UI of a linux sysytem.
+Terminal gives acces to the shell.
+Command line is more powerfull
+
+###root###
+
+Root is systems superuser
+Normal accounts can only do a subset of the things root can do.
+Root access is typically restricted to sysytema administrators.
+
+
 
  ## Basic Commands ## 
  
 1. **pwd** -- displays the current directory 
 2. **cd** -- use to change directory 
-   i) **cd ./<filename>** -- use to specfic an absolute path 
-   ii) **cd ../** -- use to go to parent folder 
-  iii) **cd ~** -- use to go to Home
-3. ** ls ** --show which all files are present in the order
-   i) **ls -l** -- gives the list  of files with created date 
-  ii) **ls -r** -- gives the folder name in reverse order 
- iii) **ls -p** --  append / indicator to directories
+   i) **"cd ./<filename>"** -- use to specfic an absolute path 
+   ii) **"cd ../"** -- use to go to parent folder 
+  iii) **"cd ~"** -- use to go to Home
+3. **ls** --show which all files are present in the order
+   i) **"ls -l"** -- gives the list  of files with created date 
+  ii) **"ls -r"** -- gives the folder name in reverse order 
+ iii) **"ls -p"** --  append / indicator to directories
 
  ## Administrative privileges in terminal ##
  
