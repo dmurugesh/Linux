@@ -13,14 +13,14 @@ The Complete Linux Course: Beginner to Power User!
 8. **/var** - variable most notable log files
 All the above directories can have sub folder/directires inside it
 
-##Shell##
+## Shell ##
 
 Shell - A program that accepts your commands and executes the commands.
 Shell is the default UI of a linux sysytem.
 Terminal gives acces to the shell.
 Command line is more powerfull
 
-###root###
+### root ###
 
 Root is systems superuser
 Normal accounts can only do a subset of the things root can do.
