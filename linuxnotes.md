@@ -123,6 +123,13 @@ syntax echo $VAR_NAME
 * **"umask [-S] [mode]"** - Set the file creation mask to mode, If given, Use -S to for  symbolic notation
 * **cmod** helps in adding or giving permissions, while **umask** turns off, subtracts or takes away permissions
 * Common **umask** Mode are 022, 002, 077, 007
+* umask 0022 is the same as umask 022
+* chmod 0644 is same as chmod 644
+* The special modes are 
+   i) setuid
+  ii) setgid
+ iii) sticky
+  
  
   ## apt-get Install files ##
   
