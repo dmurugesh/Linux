@@ -90,6 +90,40 @@ syntax echo $VAR_NAME
 * **"ls -d <Filename>"** - display the Directory name
 * **"ls --color"** - change the color of display 
  
+   #### Symbolic links #### 
+* A link is a points to the actual file or directory 
+* use the link as if it were the file 
+* **"./<filename>"** - use to run the excutable files
+* 
+
+  ## File and Directory Permissions ##
+
+*  When we type **"ls -l"** the first character represnt the file type
+   **-** => Regular File
+   **d** => Directory
+   **l** => Symbolic Link
+   eg: 
+* Other character represent r for read, w for write and x for Excute
+* Permission Catergories 
+  u stands for User
+  g stands for Group
+  o stands for Other
+  a stands for All
+  permission will be always displayed in order **type-user-group-other**
+* Groups
+  Ever user is in atleast one group 
+  User can belong to many groups
+
+ #### Working with group ####
+
+* **"chgrp "** - Command use to change the group of filies
+* File creation mask - Dile creation mask determines default permission, If no mask were used permission would be
+   777 for directories 
+   666 for files 
+* **"umask [-S] [mode]"** - Set the file creation mask to mode, If given, Use -S to for  symbolic notation
+* **cmod** helps in adding or giving permissions, while **umask** turns off, subtracts or takes away permissions
+* Common **umask** Mode are 022, 002, 077, 007
+ 
   ## apt-get Install files ##
   
 1. **"apt-get install <name of appplication>"** -- install the the application 
