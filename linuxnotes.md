@@ -274,6 +274,121 @@ syntax echo $VAR_NAME
   C-x c       - to exit 
   C-h t       - Built-in tutorial
   ``` 
+  ## Various Grapical Editors ##
+
+* Few graphical editors are 
+   * emacs - Emacs has a graphical mode too
+   * gedit - The default text editor for Gnome, similar to Notepad
+   * gvvim - The graphical version of vim
+   * kedit - The default text editor for the KDE.
+   * Abiword - Same as Microsoft word alternative
+   * LibreOffice - Full office suite
+   * kate - source code editor
+
+ ## Delete, Copy, Moving, Renaming, Compress and Creating ##
+
+ #### Delete Filies ####  
+ ```
+  "rm <filename>"     - Remove file
+  "rm -r dir"         - Remove the directory and its content recursively
+  "rm -f <filename>"  - Force removal and never prompt for conformation
+ ```
+
+ #### moving and renaming Files ####  
+ ```
+  "mv"                         - move or rename files and directories      
+  "mv source destination"      - move from soucre to destination 
+  "mv source"                  - the source file will be renamed
+  "mv -i source destination"   - to overwrite the destination
+ ```
+
+ #### Sort data ####  
+ ```
+  "sort file"  - sort text in file.
+  " -k F"      - Sort by key. F is field number.
+  " -r "       - Sort in reverse order.
+  " -u "       - Sort in uniquie.
+ ```
+
+ #### Create collection of files ####  
+ ```
+  "tar [-] c|x|t f tarfile [pattern]"  - Crate, extract or list contents of a tar archivve using pattern, if supplied.
+  c      - Create a tar archive
+  x      - Extract files from the archive
+  t      - Display the table of contents (list)
+  v      - Be verbose
+  z      - Use compression
+  f file - Use this file
+ ```
+
+ #### Disk uasage ####  
+ ```
+  du     - Estimates file usage
+  du -k  - Display sizes in Kilobytes
+  du -h  - Displays sizes in human readable format
+ ```
+
+ ## Wildcards ##
+ 
+ * A Character or string used for matching file or directories name
+ * Globbing expands the wildcard pattern into a list of files and/or directories.
+ * Wildcards can be used with most commands
+     * ls 
+     * rm
+     * cp
+ * Commands 
+   ```
+    *    - Matches zero or more characters
+           eg: *.txt, a*, a*.txt
+    ?    - Matches exactly one character 
+           eg: ?.txt, a?, a?.txt 
+   []    - A character class, Matches any of the characters included between the brackets. Matches exactly one character
+           eg: [aeiou], ca[nt]
+  [!]    - Matches any of the characters Not included between the brackets. Matches exactly one character
+           eg: [!aeiou] reult such as baseball,cricket
+  [a-g]  - Matches all files that start with a,b,c,d,e,f or g
+  [3-6]  - Matches all files that start with 3,4,5 or 6
+   \     - Escape character use if you want to match a wildcard character
+     Predefined Characters
+  [[:alpha:]]   - Matches all the character alphabets include lower cas and uppercase
+  [[:alnum:]]   - Matches alphanumber characters(alhabets & digit)
+  [[:digit:]]   - Matches numeric value
+  [[:lower:]]   - Matches all the lower case aplhabets
+  [[:space:]]   - Matches white space,tab,new lin characters
+  [[:upper:]]   - Matches all the upper case alphabets
+   ```
+ ## Input, Output and Redirection ##
+
+ * There are mainly three types of I/O
+     i) Standard Input - Abbr => stdin, file deescriptor- 0
+    ii) Standard Output - Abbr => stdout, file deescriptor- 1 
+   iii) Standard Error - Abbr => stderr, file deescriptor- 2
+    File descripto - are just number to open file
+ * Redirection 
+   ```
+    >      redirects output from a command to a file 
+   >>      redirects standart output to a file 
+    <      redirects input file to a command
+   &       Used with redirection to signal that a file descriptor is being used
+   2>&l    Combine stderr and standard output
+  2>file   Redirect standard error to a file
+   null    Redirect output to nowhere
+   ```
+
+ ## Comparing Files ##
+
+ * Commands 
+ ```
+ diff file1 file2     - Compare two files
+ sdiff file1 file2    - Side by side comparison
+ vimdiff file1 file2  - Highlight difference in vim
+    Vimdiff 
+ ctrl -w w  - Go to next window
+ :q         - Quit(close current window)
+ :qa        - Quit all (close both files)
+ :qa!       - Force quit all
+ ```
+
   
  
   ## apt-get Install files ##
