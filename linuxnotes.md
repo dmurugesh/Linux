@@ -129,6 +129,151 @@ syntax echo $VAR_NAME
    i) setuid
   ii) setgid
  iii) sticky
+ 
+  ## Viewing Filies and The nano editor ##
+
+#### Displaying the Content of Filies ####
+ 
+ ```
+ **"cat <filename>"** - Display the contents of File 
+ **"more <filename>"** - Browse through text file 
+ **"less <filename>"** - More feature than more 
+ **"head <filename>"** - Output the begining (or top) portion of file, ie first lines of file.
+ **"tail <filename>"** - Output the ending (or bottom) portion of file, ie last line of file.
+ **"tail -f <filename>"** - follow the file, Displays data as it is beign written to file
+
+ ``` 
+ *Note* 
+ head and tail - Displays only 10 lines by default 
+                 change in behaviour with -n, where n = number of lines, 
+                 eg: tail 15 file.txt
+ 
+#### Nano editor ####
+
+ * Nano is a siple editor. Easy to learn. Note advanced as vi or emacs.
+ * If nano isnt available, look for pico
+ ```
+ ctrl + x - to exit the file
+ ctrl + o - to save the file
+ ctrl + g - to get help about nona
+ ```                          
+
+ ## Editing Files with Vi ##
+
+#### Vi Editor ####
+
+* Has advanced and powerfull feature, Not intuitive  
+* Requies a time investment 
+  ```
+  **"vi <Filename>"** - Edit file 
+  **"vim <Filename>"** - Same as vi, but more features
+  **"view <Filename>"** - Starts vim in read-only mode
+  ```
+* Vi always works in three mode  
+   i) command Mode - Allows to navigate about the file, perform searches, copy text, delete text and paste text
+  ii) insert mode - 
+ iii) line mode  - Is used to navivagest between the lines in the file
+ *Note*
+  *To navigate to command mode in Vi press **Esc** key.
+* Vi mode and shortcuts
+  ```
+  1. Vi Command Mode and Navigation 
+     * k - Up one line
+     * j - Down one line 
+     * h - Left one character 
+     * l - Right one character 
+     * w - Right one word 
+     * b - left one word
+     * ^ - Go to the begining of the line
+     * $ - Go to the end of the life
+  2. Vi insert mode
+     * i - Insert at the cursor postion 
+     * I - Insert at the begining of the line
+     * a - Append after cursor position
+     * A - Append at the end of the line
+  3. Vi Line mode
+     * :W - writes(saves) the file
+     * :W! - Forces the file to be saved
+     * :q - Quit
+     * :q! - Quit without saving chnages
+     * :Wq! - write and quit
+     * :x - same as :wq   
+     * :n - Positions the currsoe at line n.
+     * :$ - Positions the cursor on the last line
+     * :set nu - Turn on line numbering
+     * :set nonu - Turn off line numbering
+     * :help - get help
+  ```
+  #### Vi - Repeating Commands ####
+* Repeat a command by preceding it with a number 
+   * 5k = Move up a line 5 times
+   * 80i<text><ESC> = Insert<text> 80 times
+   * 80i_<Esc> = Insert 80 "-" characcters
+
+ * Vi Commands 
+  ```
+  * x - Delete a character
+  * dw - Delete a  word
+  * dd -Delete a line
+  * D - Delete from current position
+  * r - Replace te current character 
+  * cw - Change the current word
+  * cc - Change the current line
+  * c$ - Change the text from the current position
+  * C - Same as c$
+  * ~ - Reverse the case of a character
+  * yy - Yank(copy) the current line
+  * y<psoition> - Yanl the <position>
+  * p - Paste the most recent deleted or yanked text
+  * u - Undo
+  * ctrl-R - redo
+  * /<pattern> - Start a forward search
+  * ?<pattern> - start a reverse search
+  ```
+
+ ## Editind Files with Emacs ##
+ 
+* Powerfull edit as vi. we can use either vi or Emacs
+* ```
+  syntax  **"emacs <filename>"**
+  
+  *Note*
+  C-<char>  - C stands for ctrl
+  M-<char>  - M stands for alt key
+  M-<char>  - M stands for Esc key also
+  ``` 
+* Emacs commands
+  ```
+  C-h         - Help
+  C-x C-c     - Exit
+  C-x C-s     - Save the file
+  C-h t       - Built-in tutorial
+  C-h k <key> - Describe key, get help on specfic key command
+  C-p 	      - Previous line 
+  C-n         - next line
+  C-b         - Backward one character 
+  C-f         - Forward one character
+  M-f         - Forward one word
+  M-b         - Backward one word
+      Navigation Commands
+  C-a         - Go to the beginin of the line
+  C-e         - Go to the end of the line
+  M-<         - Go to the begining of the line
+  M->         - Go to end of the line
+       Deleting Commands
+  C-d         - Delete a character
+  M-d         - Delete a word
+       copy,paste
+  C-k         - Cut(Kill)
+  C-y         - Paste
+  C-x u       - Undo
+       other commands
+  C-s         - Start a forward search
+  C-r         - Start a reverse search
+  C-u N <coomand> - Repeat <command> N times
+  C-x c       - to exit 
+  C-h t       - Built-in tutorial
+  ``` 
   
  
   ## apt-get Install files ##
