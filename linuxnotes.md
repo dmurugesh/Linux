@@ -165,9 +165,9 @@ syntax echo $VAR_NAME
 * Has advanced and powerfull feature, Not intuitive  
 * Requies a time investment 
   ```
-  **"vi <Filename>"** - Edit file 
-  **"vim <Filename>"** - Same as vi, but more features
-  **"view <Filename>"** - Starts vim in read-only mode
+  vi <Filename> - Edit file 
+  vim <Filename> - Same as vi, but more features
+  view <Filename> - Starts vim in read-only mode
   ```
 * Vi always works in three mode  
    i) command Mode - Allows to navigate about the file, perform searches, copy text, delete text and paste text
@@ -178,57 +178,57 @@ syntax echo $VAR_NAME
 * Vi mode and shortcuts
   ```
   1. Vi Command Mode and Navigation 
-     * k - Up one line
-     * j - Down one line 
-     * h - Left one character 
-     * l - Right one character 
-     * w - Right one word 
-     * b - left one word
-     * ^ - Go to the begining of the line
-     * $ - Go to the end of the life
+      k - Up one line
+      j - Down one line 
+      h - Left one character 
+      l - Right one character 
+      w - Right one word 
+      b - left one word
+      ^ - Go to the begining of the line
+      $ - Go to the end of the life
   2. Vi insert mode
-     * i - Insert at the cursor postion 
-     * I - Insert at the begining of the line
-     * a - Append after cursor position
-     * A - Append at the end of the line
+      i - Insert at the cursor postion 
+      I - Insert at the begining of the line
+      a - Append after cursor position
+      A - Append at the end of the line
   3. Vi Line mode
-     * :W - writes(saves) the file
-     * :W! - Forces the file to be saved
-     * :q - Quit
-     * :q! - Quit without saving chnages
-     * :Wq! - write and quit
-     * :x - same as :wq   
-     * :n - Positions the currsoe at line n.
-     * :$ - Positions the cursor on the last line
-     * :set nu - Turn on line numbering
-     * :set nonu - Turn off line numbering
-     * :help - get help
+      :W - writes(saves) the file
+      :W! - Forces the file to be saved
+      :q - Quit
+      :q! - Quit without saving chnages
+      :Wq! - write and quit
+      :x - same as :wq   
+      :n - Positions the currsoe at line n.
+      :$ - Positions the cursor on the last line
+      :set nu - Turn on line numbering
+      :set nonu - Turn off line numbering
+      :help - get help
   ```
   #### Vi - Repeating Commands ####
-* Repeat a command by preceding it with a number 
+ * Repeat a command by preceding it with a number 
    * 5k = Move up a line 5 times
    * 80i<text><ESC> = Insert<text> 80 times
    * 80i_<Esc> = Insert 80 "-" characcters
 
  * Vi Commands 
   ```
-  * x - Delete a character
-  * dw - Delete a  word
-  * dd -Delete a line
-  * D - Delete from current position
-  * r - Replace te current character 
-  * cw - Change the current word
-  * cc - Change the current line
-  * c$ - Change the text from the current position
-  * C - Same as c$
-  * ~ - Reverse the case of a character
-  * yy - Yank(copy) the current line
-  * y<psoition> - Yanl the <position>
-  * p - Paste the most recent deleted or yanked text
-  * u - Undo
-  * ctrl-R - redo
-  * /<pattern> - Start a forward search
-  * ?<pattern> - start a reverse search
+   x - Delete a character
+   dw - Delete a  word
+   dd -Delete a line
+   D - Delete from current position
+   r - Replace te current character 
+   cw - Change the current word
+   cc - Change the current line
+   c$ - Change the text from the current position
+   C - Same as c$
+   ~ - Reverse the case of a character
+   yy - Yank(copy) the current line
+   y<psoition> - Yanl the <position>
+   p - Paste the most recent deleted or yanked text
+   u - Undo
+   ctrl-R - redo
+   /<pattern> - Start a forward search
+   ?<pattern> - start a reverse search
   ```
 
  ## Editind Files with Emacs ##
