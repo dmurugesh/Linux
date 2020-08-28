@@ -243,6 +243,7 @@ syntax echo $VAR_NAME
   M-<char>  - M stands for Esc key also
   ``` 
 * Emacs commands
+ 
   ```
   C-h         - Help
   C-x C-c     - Exit
@@ -288,6 +289,7 @@ syntax echo $VAR_NAME
  ## Delete, Copy, Moving, Renaming, Compress and Creating ##
 
  #### Delete Filies ####  
+ 
  ```
   "rm <filename>"     - Remove file
   "rm -r dir"         - Remove the directory and its content recursively
@@ -303,6 +305,7 @@ syntax echo $VAR_NAME
  ```
 
  #### Sort data ####  
+ 
  ```
   "sort file"  - sort text in file.
   " -k F"      - Sort by key. F is field number.
@@ -311,6 +314,7 @@ syntax echo $VAR_NAME
  ```
 
  #### Create collection of files ####  
+ 
  ```
   "tar [-] c|x|t f tarfile [pattern]"  - Crate, extract or list contents of a tar archivve using pattern, if supplied.
   c      - Create a tar archive
@@ -322,6 +326,7 @@ syntax echo $VAR_NAME
  ```
 
  #### Disk uasage ####  
+ 
  ```
   du     - Estimates file usage
   du -k  - Display sizes in Kilobytes
@@ -344,36 +349,38 @@ syntax echo $VAR_NAME
            eg: ?.txt, a?, a?.txt 
    []    - A character class, Matches any of the characters included between the brackets. Matches exactly one character
            eg: [aeiou], ca[nt]
-  [!]    - Matches any of the characters Not included between the brackets. Matches exactly one character
+    ```
+ *  "[!]"    - Matches any of the characters Not included between the brackets. Matches exactly one character
            eg: [!aeiou] reult such as baseball,cricket
-  [a-g]  - Matches all files that start with a,b,c,d,e,f or g
-  [3-6]  - Matches all files that start with 3,4,5 or 6
-   \     - Escape character use if you want to match a wildcard character
-     Predefined Characters
-  [[:alpha:]]   - Matches all the character alphabets include lower cas and uppercase
-  [[:alnum:]]   - Matches alphanumber characters(alhabets & digit)
-  [[:digit:]]   - Matches numeric value
-  [[:lower:]]   - Matches all the lower case aplhabets
-  [[:space:]]   - Matches white space,tab,new lin characters
-  [[:upper:]]   - Matches all the upper case alphabets
-   ```
+ * [a-g]  - Matches all files that start with a,b,c,d,e,f or g
+ * [3-6]  - Matches all files that start with 3,4,5 or 6
+ *  \     - Escape character use if you want to match a wildcard character
+ *    Predefined Characters
+ * [[:alpha:]]   - Matches all the character alphabets include lower cas and uppercase
+ * [[:alnum:]]   - Matches alphanumber characters(alhabets & digit)
+ * [[:digit:]]   - Matches numeric value
+ * [[:lower:]]   - Matches all the lower case aplhabets
+ * [[:space:]]   - Matches white space,tab,new lin characters
+ * [[:upper:]]   - Matches all the upper case alphabets
+
  ## Input, Output and Redirection ##
 
  * There are mainly three types of I/O
      i) Standard Input - Abbr => stdin, file deescriptor- 0
     ii) Standard Output - Abbr => stdout, file deescriptor- 1 
    iii) Standard Error - Abbr => stderr, file deescriptor- 2
-    File descripto - are just number to open file
- * Redirection 
-   ```
-    >      redirects output from a command to a file 
-   >>      redirects standart output to a file 
-    <      redirects input file to a command
-   &       Used with redirection to signal that a file descriptor is being used
-   2>&l    Combine stderr and standard output
-  2>file   Redirect standard error to a file
-   null    Redirect output to nowhere
-   ```
+    File descripto - are just number to open file 
+
+   * Redirection
+
+ *    >      redirects output from a command to a file 
+ *  >>      redirects standart output to a file 
+ *   <      redirects input file to a command
+ *  &       Used with redirection to signal that a file descriptor is being used
+ *  2>&l    Combine stderr and standard output
+ * "2>file"   Redirect standard error to a file
+ * "null"    Redirect output to nowhere
+
 
  ## Comparing Files ##
 
