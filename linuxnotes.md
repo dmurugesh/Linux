@@ -397,6 +397,21 @@ syntax echo $VAR_NAME
  :qa        - Quit all (close both files)
  :qa!       - Force quit all
  ```
+   ## Searching in Files and using pipes ##
+ ```
+ grep - To look for text within a file, Display lines matching a pattern
+        Syntax - **"grep <particular pattern we are searching for> <Filename>"**
+        eg: grep user secret
+ -i   - Perform a search, ignoring case
+        eg: grep -i User secret
+ -c   - Count the number of occurences in a file.
+        eg: grep -ci User secret
+ -n   - preced ouput with line number.
+        eg: grep -ni User secret
+ -v   - Invert match. Print lines that dont match
+        eg: grep -vi User secret
+ ```
+ 
   #### Pipe ####
 
  * pipe '|' chains two commands.
