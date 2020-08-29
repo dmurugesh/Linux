@@ -397,6 +397,25 @@ syntax echo $VAR_NAME
  :qa        - Quit all (close both files)
  :qa!       - Force quit all
  ```
+  #### Pipe ####
+
+ * pipe '|' chains two commands.
+ * Takes the standard output from the preceding command and passes it as the standard input to the following command.
+ * Error messgaes from the first command will not be passed to second command by default.
+ ```
+ Syntax => cat file | grep pattern
+ ```
+ #### cut command #####
+ ```
+ Syntax => cut [file]          //Cut out selected portions of file. If file is omitted, use standard input.
+ ```
+ #### Cut options #####
+
+ * -d delimeter Use delimeter as filed seperator.
+ * -f N Display the Nth field
+
+
+
 
 
 Search contents in a file
