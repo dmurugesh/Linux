@@ -398,6 +398,46 @@ syntax echo $VAR_NAME
  :qa!       - Force quit all
  ```
 
+
+Search contents in a file
+
+grep Diplay lines matching pattern.
+grep pattern file
+grep options
+-i Perform a seacrh ignoring case -c Count the number of occurances in a file. -n Precede output with line numbers. -v Invert Match. Print lines that dont match.
+
+Pipe
+
+pipe '|' chains two commands.
+Takes the standard output from the preceding command and passes it as the standard input to the following command.
+Error messgaes from the first command will not be passed to second command by default.
+cat file | grep pattern
+cut command
+
+cut [file]          //Cut out selected portions of file. If file is omitted, use standard input.
+Cut options
+
+-d delimeter Use delimeter as filed seperator.
+-f N Display the Nth field
+Copy files over network
+To copy files from llocal work station to a linux server or between linux servers we need to use 'SCP' or 'SFTP'.
+SCP - Secure copy SFTP - SSH file transfer protocol
+
+To use scp or sftp we need a client like 'PuTTY secure file transfer client'.
+
+Graphical SCP/SFTP clients
+
+cyberduck
+fileZilla
+WinSCP
+eg:
+
+scp source destination copy source to destination
+eg: scp abc.txt linuxsvr:/tmp/
+
+sftp host           start a secure file transfer session with host. (when connected to a remote, use lls oand lpwd for lisiting files)
+
+ftp host            start a file transfer session with host.
   
  
   ## apt-get Install files ##
