@@ -472,6 +472,80 @@ eg: scp abc.txt linuxsvr:/tmp/
 sftp host           start a secure file transfer session with host. (when connected to a remote, use lls oand lpwd for lisiting files)
 
 ftp host            start a file transfer session with host.
+
+Shell History
+history     Displaye shell history
+HISTSIZE    Controls the number of commands to retain in history
+export HISTSIZE = 1000
+installing softwares
+for RPM packages
+
+yum search string           Search for string
+yum info [package]          Display info
+yum install [-y] package    install package
+yum remove package          Remove package
+rpm -qa                     List all installed packages
+rpm -ivh package.rpm        install package
+rpm -e package              remove
+DEB ditributions
+
+APT - advanced Packaging tool
+
+apt-cache search string         Search string
+apt-cache show package          display info
+apt-get install [-y] package    Install package
+apt-get remove package          Remove package , configuration changes stay
+apt-get purge package           Remove package, deleting configuration
+dpkg -l                         List installed packages
+dpkg -i                         install packageShell History
+history     Displaye shell history
+HISTSIZE    Controls the number of commands to retain in history
+export HISTSIZE = 1000
+installing softwares
+for RPM packages
+
+yum search string           Search for string
+yum info [package]          Display info
+yum install [-y] package    install package
+yum remove package          Remove package
+rpm -qa                     List all installed packages
+rpm -ivh package.rpm        install package
+rpm -e package              remove
+DEB ditributions
+
+APT - advanced Packaging tool
+
+apt-cache search string         Search string
+apt-cache show package          display info
+apt-get install [-y] package    Install package
+apt-get remove package          Remove package , configuration changes stay
+apt-get purge package           Remove package, deleting configuration
+dpkg -l                         List installed packages
+dpkg -i                         install packageShell History
+history     Displaye shell history
+HISTSIZE    Controls the number of commands to retain in history
+export HISTSIZE = 1000
+installing softwares
+for RPM packages
+
+yum search string           Search for string
+yum info [package]          Display info
+yum install [-y] package    install package
+yum remove package          Remove package
+rpm -qa                     List all installed packages
+rpm -ivh package.rpm        install package
+rpm -e package              remove
+DEB ditributions
+
+APT - advanced Packaging tool
+
+apt-cache search string         Search string
+apt-cache show package          display info
+apt-get install [-y] package    Install package
+apt-get remove package          Remove package , configuration changes stay
+apt-get purge package           Remove package, deleting configuration
+dpkg -l                         List installed packages
+dpkg -i                         install package
   
  
   ## apt-get Install files ##
