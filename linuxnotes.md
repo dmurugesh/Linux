@@ -429,7 +429,129 @@ syntax echo $VAR_NAME
  * -d delimeter Use delimeter as filed seperator.
  * -f N Display the Nth field
 
+ ## Transfering and Copying files over the network ##
 
+ #### Copying Filies over the Network ####
+
+ * To copy files from llocal work station to a linux server or between linux servers we need to use 'SCP' or 'SFTP'.
+ * Two Types 
+     * SCP - Secure Copy
+     * SFTP - SSH file transfer Protocol/Secure file transfer protocol. When use local files and remote files use SFTP.
+ * To copy files from llocal work station to a linux server or between linux servers we need to use 'SCP' or 'SFTP'.
+
+ #### Graphical SCP/SFTP Clients ####
+ * Cyberduck
+ * FileZilla
+ * WinSCP
+ 
+ #### File transfer ####
+ * SCP 
+   ```
+   Syntax : **"scp <filename> <destination>"**
+   eg: scp z.txt linxsvr:/home/Desktop
+   ```
+ * SFTP 
+   ```
+   syntax : **"sftp <hostname>"** - start a file transfer session with host.
+            use **"put <filename>"** - to transfer the file
+   eg: sftp linuxsvr 
+       put z.txt => z.txt file will be aviable in remote
+   ```
+ * FTP 
+   ```
+   syntax : **"ftp <hostname>"** - start a file transfer session with host.
+            use **"put <filename>"** - to transfer the file 
+   eg: ftp linuxsvr 
+       put z.txt => z.txt file will be aviable in remote
+   ```
+
+ ## Customize the Shell Prompt ##
+ 
+ * Use an Environment variable to customize 
+ * For Bash, ksh and sh use enviroment variable "PS1" is used to set the primary prompt string
+ * For Csh, tcsh and zsh use enviroment variable "prompt"
+ #### Customizing prompt with PS1 ####
+ ```
+ \d - Date in "Weekday Month Date" format "Tue May 26"
+ \h - Hostname up to the first period
+ \H - Hostname
+ \n - Newline
+ \t - Current time in 24-hour HH:MM:SS format
+ \T - Current time in 12-hour HH:MM:SS format
+ \@ - Current time in 12-hour am/pm format
+ \A - Current time in 24-hour format
+ \u - Username of the current user
+ \w - Current working direectory
+ \W - Basename of the current working directory
+ \$ - If the effective UID is 0, a #, otherwise a $
+ ```
+             
+ ## Shell Alises ##
+
+ * If we want to type the same command over and over again we can create shortcut called an alias.
+ * An alias can be thought of as a text expander 
+ * Alias comes predefined in many linux commands
+ * Syntax 
+   ```
+    Syntax - **"alias [name[=value]]"**
+
+   ```
+ * commands
+   ```
+    $ alias grpe='grep' -  Fix Typos 
+    $ alias cls='clear' - Make Linux behave like another OS 
+         Removing Aliases 
+    unalias name - Remove the name alisas
+    unalias -a - Remoove all Aliases
+   ```
+
+ ## Enviroment Variables ##
+ 
+ * An environment variable is a storage location that has a name and a value.They often affect the way programs behave
+   eg: EDITOR=nano
+ * ```
+    syntax   : **"printenv <enviroment variable name>"**
+    syntax 2 : **" echo $<enviroment variable name>"**
+   ```
+ * Environment variables are upper case by convection, rarely we see lowercase 
+ * Creating and removing an Enviroment variable 
+   ```
+       Creating
+   Syntax  : **"export VAR="value""**
+             eg: export EDITOR="vi"
+       Removing
+   Syntax : **"unset VAR"** 
+   ```
+ 
+  ## Processes and Job control ##
+
+  ```
+    ps              - Display process status
+    ps -e           - Display all process
+    ps -f           - Full format lisitin
+    ps -p pid       - Display usernames processes
+    ps -e --forest  - Display a process tree
+    ps -u username  - Display user's processes. 
+    ps -ef          - Display all process 
+    ps -eH          - Display process tree 
+        Other  ways to view process
+    pstree    - Display processes in a tree format
+    top       - Interactive process viewer
+    htop      - Interactie process viewer
+  ``` 
+
+  #### Background and foreground process ####
+
+  ```
+  command &    - Start command in background
+  ctrl-c       - Kill the foreground process
+  ctrl-z       - Suspend the foreground process
+  bg [%num]    - Background a suspened process
+  fg [%num]    - Foreground a background process
+  kill [%num]  - Kill a process by job number or PID
+  jobs [%num]  - List Jobs 
+  kill 123     - Kill by process ID
+  ```
 
 
 
