@@ -733,9 +733,81 @@ syntax echo $VAR_NAME
  * UIDs, Root account UID is 0. 
  * GID - group ID 
  ```
- userdadd[options] username
+ useradd[options] username
  -c "COMMENT"            - comments for account
  -m                      - create the home dire tory
  -s/shell/path           - The path to the users shell.
  groups username         - to know the group
+ passwd <username>       - to create password using passwd
+ -g GROUP                - Specify the default group
+ -G GROUP1,GROUPN        - Additional groups
+ -r                      - Create a system account
+ -d <path>               - Specify the home directory
+                           eg: -d /home/dir
+ userdel [-r] <username> - to delete user home directory account
+          Modify user account
+ usermod [options] username
+ -c "COMMENT"            - comments account
+ -g GROUP                - Specify the default group
+ -G GROUP1,GROUPN        - Additional groups
+ -s/shell/path           - Path to the user shell
+ ```
+ *Groups 
+ ```
+ groupadd [options] <groupname>      - to create group with default GID
+ groupadd -g <idvalue> <groupname>   - to create group with idvalue has GID
+ groupdel <groupname>                - to delete group
+ groupmod [options] <groupname>      - to modify the group name/id
+ groupmod -g <gid vlaue>             - to change the GID value
+ groupmod -n <group name>            - to change the Group name
+ ```
+
+ ## Special Permissions ##
+ 
+ #### Setuid ####
+ * When a process is  started, it runs using the starting users UID and GID
+ * Setuid = set user ID upon execution regardless of owner
+ * ping - need privillages to access network devices setting the setuid bit and having root as the owner of the file and lets anyone on the system successfully use ping coommand
+ * chsh - command allows the user to change their shell 
+ ```
+   Adding setuid attribut 
+ chmod u+s /path/to/file
+ chmod 4755 /path.to.file
+   removing th setuid attribute 
+ chmod u-s /path/to/file
+ chmod 0755 /path/to/file
+    finding the setuid files
+ find / -perm /4000 -ls
+ 
+ ```
+ #### Setgid ####
+ * setgid = set group ID upon excution 
+ * same as setuid
+ ```
+     finding the setgid files
+  find / -perm /2000 -ls
+     Adding setuid attribut 
+ chmod g+s /path/to/file
+ chmod 2755 /path.to.file
+     removing th setuid attribute 
+ chmod g-s /path/to/file
+ chmod 0755 /path/to/file
+ ```
+
+ ```
+      Adding the setuid and setgid
+  chmod ug+s /path/to/file
+  chmod 6755 /pat/to/file
+ ```
+ 
+ #### Sticky bit ####
+ 
+ * Use on a directory to only aloow the owner of the file/directory to delete it 
+ ```
+     Adding setuid attribut 
+  chmod o+t /path/to/file
+  chmod 1755 /path.to.file
+     removing th setuid attribute 
+  chmod go-t /path/to/file
+  chmod 0777 /path/to/file
  ```
