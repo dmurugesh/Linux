@@ -552,123 +552,87 @@ syntax echo $VAR_NAME
   jobs [%num]  - List Jobs 
   kill 123     - Kill by process ID
   ```
+  ## Switching user ##
+
+ * Commands
+ ```
+ su [username]   - Change user ID or becomsuperuser
+ su -            - A hypen is used to provide enviroment similar to what the user would expect had the user logged in directtly
+ su -c ommand    - Specify a command to be excuted, if command is more than one lenght it should be given in quotes
+ whoami          - Returns your current account name
+      Sudo commands
+ sudo -l         - List available commands
+ sudo command    - Run command as root
+ sudo -u user command    - same as above
+ sudo -u root command    - Run as user
+    Change the sudo configuration
+ visudo                  - Edit the /etc/sudoers file
+ ```
+
+ ## Shell Histroy ##
+ 
+ * Executed commands are added to the history  
+ * Shell history can be displayed and recalled 
+ * Shell history is stored in memory and on disk 
+    * ~/.bash_history
+    * ~/history
+    * ~/.histfile
+ * By defualt shell history saves 500 commands in history
+ *  Commands 
+  ```
+   history    - Displays the shell history
+   HISTSIZE   - Controlss the number of commands to retain in history
+                eg: export HISTSIZE = 1000
+   !N         - Repeat command Line number N
+   !!         - Repeat the pervious command lline 
+   !string    - Repeat the most recent command starting with "string"
+   !^         - Represents the first argument ie !:1
+   !$         - Represents the last argument
+       Searching Shell history 
+   ctrl-r     - Reverse shell history search
+   Enter      - Excute the  command
+   Arrows     - Change the command
+   ctrl-g     - Cancel the search
+   
+  ```
+ * eg: 
+   ```
+   !:N <Event> <Separator> <Word>
+      ! Reprersents command line 
+      != the most recenet command line
+    :N  Represents a word on the command line 
+         0 = command 1 = first argument etc
+   ```
+
+ ## Installing software ##
+
+ #### RPM packages (Redhat Package Manager) ####
+   ```
+   yum search string         - Search for string
+   yum info [package]        - Display info
+   yum install [-y] package  - install package 
+   yum remove package        - Remove package  
+   rpm -qa                   - List all installed packages
+   rpm -qf /path/to/file     - List the file packages
+   rpm -ql package           - List packages files
+   rpm -ivh package.rpm      - Install package
+   rpm -e <package-name>     - Erase (uninstall) package
+   ```
+  #### DEB Distros ####
+  ```
+  apt-cache search string       - Search for string
+  apt-get install [-y] package  - Install package
+  apt-get remove package        - Remove package, leave configuration
+  apt-get purge package         - Remove package, deleting configuration
+  apt-cache show package        - Display information about package
+  dpkg -l                       - List installed packages
+  dpkg -S /path/to/file         - List files package
+  dpkg -L package               - List all files in package 
+  dpkg -i package.ded           - Install package
+  ```
 
 
 
-Search contents in a file
-
-grep Diplay lines matching pattern.
-grep pattern file
-grep options
--i Perform a seacrh ignoring case -c Count the number of occurances in a file. -n Precede output with line numbers. -v Invert Match. Print lines that dont match.
-
-Pipe
-
-pipe '|' chains two commands.
-Takes the standard output from the preceding command and passes it as the standard input to the following command.
-Error messgaes from the first command will not be passed to second command by default.
-cat file | grep pattern
-cut command
-
-cut [file]          //Cut out selected portions of file. If file is omitted, use standard input.
-Cut options
-
--d delimeter Use delimeter as filed seperator.
--f N Display the Nth field
-Copy files over network
-To copy files from llocal work station to a linux server or between linux servers we need to use 'SCP' or 'SFTP'.
-SCP - Secure copy SFTP - SSH file transfer protocol
-
-To use scp or sftp we need a client like 'PuTTY secure file transfer client'.
-
-Graphical SCP/SFTP clients
-
-cyberduck
-fileZilla
-WinSCP
-eg:
-
-scp source destination copy source to destination
-eg: scp abc.txt linuxsvr:/tmp/
-
-sftp host           start a secure file transfer session with host. (when connected to a remote, use lls oand lpwd for lisiting files)
-
-ftp host            start a file transfer session with host.
-
-Shell History
-history     Displaye shell history
-HISTSIZE    Controls the number of commands to retain in history
-export HISTSIZE = 1000
-installing softwares
-for RPM packages
-
-yum search string           Search for string
-yum info [package]          Display info
-yum install [-y] package    install package
-yum remove package          Remove package
-rpm -qa                     List all installed packages
-rpm -ivh package.rpm        install package
-rpm -e package              remove
-DEB ditributions
-
-APT - advanced Packaging tool
-
-apt-cache search string         Search string
-apt-cache show package          display info
-apt-get install [-y] package    Install package
-apt-get remove package          Remove package , configuration changes stay
-apt-get purge package           Remove package, deleting configuration
-dpkg -l                         List installed packages
-dpkg -i                         install packageShell History
-history     Displaye shell history
-HISTSIZE    Controls the number of commands to retain in history
-export HISTSIZE = 1000
-installing softwares
-for RPM packages
-
-yum search string           Search for string
-yum info [package]          Display info
-yum install [-y] package    install package
-yum remove package          Remove package
-rpm -qa                     List all installed packages
-rpm -ivh package.rpm        install package
-rpm -e package              remove
-DEB ditributions
-
-APT - advanced Packaging tool
-
-apt-cache search string         Search string
-apt-cache show package          display info
-apt-get install [-y] package    Install package
-apt-get remove package          Remove package , configuration changes stay
-apt-get purge package           Remove package, deleting configuration
-dpkg -l                         List installed packages
-dpkg -i                         install packageShell History
-history     Displaye shell history
-HISTSIZE    Controls the number of commands to retain in history
-export HISTSIZE = 1000
-installing softwares
-for RPM packages
-
-yum search string           Search for string
-yum info [package]          Display info
-yum install [-y] package    install package
-yum remove package          Remove package
-rpm -qa                     List all installed packages
-rpm -ivh package.rpm        install package
-rpm -e package              remove
-DEB ditributions
-
-APT - advanced Packaging tool
-
-apt-cache search string         Search string
-apt-cache show package          display info
-apt-get install [-y] package    Install package
-apt-get remove package          Remove package , configuration changes stay
-apt-get purge package           Remove package, deleting configuration
-dpkg -l                         List installed packages
-dpkg -i                         install package
-  
  
   ## apt-get Install files ##
   
