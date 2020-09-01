@@ -654,3 +654,88 @@ syntax echo $VAR_NAME
 6. **"cp fizzbuzz foobar"** - cp stands for copy By copying fizzbuzz to a new file called foobar, we have replicated the original file in a new file with a different name.
 7. **"nano foobar"** - This will open up a space where you can immediately start typing to edit foobar.
 8. **"rm fizzbuzz"** - Unlike directories, files are deleted whether they contain content or not.
+
+ ## Disk management ##
+
+ #### Partitions #### 
+ * Disk can be divide into parts called partitions, Partitions allow you to seperate data 
+ * Having seperate partitions is one way to prevent one part of the system.
+ #### Partition tables ####
+ 1. #### MBR (Master Boot Record) ####
+ * Can only address 2 TB of disk space
+ * 4 primary partitions
+ * Extended partitions allow you to create logical partitions
+  2. #### GPT ####
+ * GPT = GUID Partition Table, GUID = Global Unique Identifier
+ * Replacing the MBR Partitioning scheme
+ * Part of UEFI, UEFI is replacing BIOS
+ * Extended partitions allow you to create logical partitions
+ * Not supported on older OS, May require newer or special tools
+ 
+ #### Mount Points ####
+ * A directory used to access the data on a partition
+ * /(slash) is always a mount point
+ * /home
+     * /home/jason is on the partition mounted on home
+
+ ## Logical volume manager ##
+ 
+ * Flexible Capacity - We can create file system that extend across multiple storage devices
+ * Expand or shrink file system in realtime while the data remains online and fully accessible
+ * Easily migrate from one storage device to another while online
+ * Data mirroring
+ * 
+  #### Create,remove migrate a PV ####
+  
+ * Physical Volumes - PV/pv
+ * Volume Groups    - VG/vg
+ * Logical Volumes  - LV/lv
+
+  ```
+   pvcreate <path to storage path>                    - to create PV
+                                                        eg: pvcrate /dev/sdb
+   pvs                                                - list of pv
+   vgcreate <vg filename> <path>                      - use to create vg 
+                                                        eg: vgcreate vg_app /dev/sdb
+   vgs                                                - to view vg 
+   lvcreate -L <filesize> -n <lv name> <vg filename>  - to create Lv(Logical volumes)
+   lvdisplay                                          - Display the details of lv 
+   mkfs -t ext4 <path>                                - Top create file system
+                                                        eg: mkfs -t ext4 /dev/vg_app/lv_data
+   mkdir <path to mount>                              - to mount
+   mount <path> <path to mount>                       - mount the fs
+   df -h <path to mount>                              - display list of file system
+   vgextend <file name> <path>                        - to extend the vg
+                                                        eg: vgextend vg_app /dev/sdc
+   lvmdiskcan                                         - Shows all storage devices to use 
+   unmount <path to mount>                            - to unmount the fils system
+                                                         eg: umount /secrest
+   lvremove <path>                                    - to remove the lv
+                                                         eg: lvremove /dev/vg_safe/lv_secrets /secrets
+   vgreduce  <filename> <path>                        - to reduce/remove vg 
+                                                        eg: vgreduce vg_safe /dev/sde
+   pvremove <path>                                    - remove vg 
+                                                        eg: pvremove /dev/sde
+   vgremove  <filename>                               - to remove vg
+                                                        eg: vgremove vg_safe
+   pvmove <source> <destination>                      - to migrate data
+                                                        eg: pvmove /dev/sdb /de/sde
+  ```
+
+ ## Manage User and groups ##
+
+ * We can have multiple accounts in associated with OS 
+ * Each Account as username, UID(unique ID), password etc
+ * Case senstive
+ * Username are usually less than 8 character, are case senstive 
+ * Passwords are stored encrypted in /etc/shadow
+ * /etc/shadow is only readable by root
+ * UIDs, Root account UID is 0. 
+ * GID - group ID 
+ ```
+ userdadd[options] username
+ -c "COMMENT"            - comments for account
+ -m                      - create the home dire tory
+ -s/shell/path           - The path to the users shell.
+ groups username         - to know the group
+ ```
