@@ -25,24 +25,24 @@
      * cp
  * Commands 
    ```
-    *    - Matches zero or more characters
-           eg: *.txt, a*, a*.txt
-    ?    - Matches exactly one character 
-           eg: ?.txt, a?, a?.txt 
-   []    - A character class, Matches any of the characters included between the brackets. Matches exactly one character
-           eg: [aeiou], ca[nt]
-  [!]    - Matches any of the characters Not included between the brackets. Matches exactly one character
-           eg: [!aeiou] reult such as baseball,cricket
-  [a-g]  - Matches all files that start with a,b,c,d,e,f or g
-  [3-6]  - Matches all files that start with 3,4,5 or 6
-   \     - Escape character use if you want to match a wildcard character
-     Predefined Characters
-  [[:alpha:]]   - Matches all the character alphabets include lower cas and uppercase
-  [[:alnum:]]   - Matches alphanumber characters(alhabets & digit)
-  [[:digit:]]   - Matches numeric value
-  [[:lower:]]   - Matches all the lower case aplhabets
-  [[:space:]]   - Matches white space,tab,new lin characters
-  [[:upper:]]   - Matches all the upper case alphabets
+        *    - Matches zero or more characters
+               eg: *.txt, a*, a*.txt
+         ?    - Matches exactly one character 
+               eg: ?.txt, a?, a?.txt 
+       []    - A character class, Matches any of the characters included between the brackets. Matches exactly one character
+               eg: [aeiou], ca[nt]
+       [!]    - Matches any of the characters Not included between the brackets. Matches exactly one character
+                eg: [!aeiou] reult such as baseball,cricket
+      [a-g]   - Matches all files that start with a,b,c,d,e,f or g
+      [3-6]   - Matches all files that start with 3,4,5 or 6
+      \        - Escape character use if you want to match a wildcard character
+             Predefined Characters
+     [[:alpha:]]   - Matches all the character alphabets include lower cas and uppercase
+     [[:alnum:]]   - Matches alphanumber characters(alhabets & digit)
+     [[:digit:]]   - Matches numeric value
+     [[:lower:]]   - Matches all the lower case aplhabets
+     [[:space:]]   - Matches white space,tab,new lin characters
+     [[:upper:]]   - Matches all the upper case alphabets
    ```
  ## Input, Output and Redirection ##
 
@@ -58,7 +58,7 @@
     <      redirects input file to a command
    &       Used with redirection to signal that a file descriptor is being used
    2>&l    Combine stderr and standard output
-  2>file   Redirect standard error to a file
+   2>file   Redirect standard error to a file
    null    Redirect output to nowhere
    ```
 
