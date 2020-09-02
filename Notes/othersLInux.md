@@ -179,16 +179,19 @@
  * IP address consists of two parts, first part is network address and second part is host address
  * Network portion of IP address tells the router what network the host belongs to.
  * The host address tells router the specific device that data to be delivered to.
+   
    Classsfull networks 
-   ![Linux Directories](/img/classfullnetworks.png?raw=true "Title")
+   ![Linux Directories](/Notes/img/classfullnetworks.png?raw=true "Title")
+   
    subnet mask 
-   ![Linux Directories](/img/subnetmask.png?raw=true "Title")
+   ![Linux Directories](/Notes/img/subnetmask.png?raw=true "Title")
+   
    broadcast address
-   ![Linux Directories](/img/broadcastadd.png?raw=true "Title")
+   ![Linux Directories](/Notes/img/broadcastadd.png?raw=true "Title")
 
  * Classless Inter-Domain Routing / CIDR 
    Reserved Private Address space
-  ![Linux Directories](/img/reservedprivatenetworks.png?raw=true "Title")
+  ![Linux Directories](/Notes/img/reservedprivatenetworks.png?raw=true "Title")
 
  #### DNS and hostname ####
   ```
@@ -217,7 +220,7 @@
    eg: webprod01.ny.us.mycompany.com
  
  #### Network ports ####
-  ![Linux Directories](/img/networkports.png?raw=true "Title")
+  ![Linux Directories](/Notes/img/networkports.png?raw=true "Title")
 
  * DHCP - Synamic Host Configuration Protocol
  * DHCP servers asssign IP address to DHCP 
