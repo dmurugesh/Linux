@@ -236,7 +236,7 @@
  * The netstat command 
  * telnet HOST_OR_IP PROT_NUMER - use telnet to check connection 
   #### Netstat Commands ####
-  ![Linux Directories](/img/netstat.png?raw=true "Title")
+  ![Linux Directories](/Notes/img/netstat.png?raw=true "Title")
 
  ## Shell Scripting ##
  
